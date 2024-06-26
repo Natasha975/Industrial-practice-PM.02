@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a8bf243e2b1845ba95b7d5a360427d83" Name="Diagram1">
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.CategoryFiles" Width="1.5" PointX="3.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.Employees" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.Events" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.Files" Width="1.5" PointX="6" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.Librarys" Width="1.5" PointX="8.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.News" Width="1.5" PointX="8.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.Roles" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.Sections" Width="1.5" PointX="6" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.StatusEvents" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.StatusFiles" Width="1.5" PointX="3.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.StatusMaterials" Width="1.5" PointX="6" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.Territorys" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.TypeEvents" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.TypeMaterials" Width="1.5" PointX="6" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.Сalendars" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RoadsOfRussiaModel.СardofMaterials" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_File_Category_File" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Employee_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Employee_Territory" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Event_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Сalendar_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Сard_of_Material_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Event_Status_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Event_Type_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_File_Status_File" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Library_File" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_СardofMaterial_File" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Library_Section" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Сard_of_Material_Status_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="RoadsOfRussiaModel.FK_Сard_of_Material_Type_Material" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

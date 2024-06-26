@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoadsOfRussiaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CategoryFiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Files" Relationship="Self.FK_File_Category_File" FromRole="CategoryFiles" ToRole="Files" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdRole" Type="Int32" Nullable="false" />
+    <Property Name="Workphone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Office" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="IdTerritory" Type="Int32" Nullable="false" />
+    <Property Name="Manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Assistant" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="E_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Other" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NewsSubscription" Type="Boolean" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_Employee_Role" FromRole="Employees" ToRole="Roles" />
+    <NavigationProperty Name="Territorys" Relationship="Self.FK_Employee_Territory" FromRole="Employees" ToRole="Territorys" />
+    <NavigationProperty Name="Events" Relationship="Self.FK_Event_Employee" FromRole="Employees" ToRole="Events" />
+    <NavigationProperty Name="Сalendars" Relationship="Self.FK_Сalendar_Employee" FromRole="Employees" ToRole="Сalendars" />
+    <NavigationProperty Name="СardofMaterials" Relationship="Self.FK_Сard_of_Material_Employee" FromRole="Employees" ToRole="СardofMaterials" />
+  </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdType" Type="Int32" />
+    <Property Name="IdStatus" Type="Int32" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdEmployee" Type="Int32" />
+    <Property Name="Other" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Event_Employee" FromRole="Events" ToRole="Employees" />
+    <NavigationProperty Name="StatusEvents" Relationship="Self.FK_Event_Status_Event" FromRole="Events" ToRole="StatusEvents" />
+    <NavigationProperty Name="TypeEvents" Relationship="Self.FK_Event_Type_Event" FromRole="Events" ToRole="TypeEvents" />
+  </EntityType>
+  <EntityType Name="Files">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Storage" Type="Int32" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdCategory" Type="Int32" />
+    <Property Name="IdSatus" Type="Int32" />
+    <NavigationProperty Name="CategoryFiles" Relationship="Self.FK_File_Category_File" FromRole="Files" ToRole="CategoryFiles" />
+    <NavigationProperty Name="StatusFiles" Relationship="Self.FK_File_Status_File" FromRole="Files" ToRole="StatusFiles" />
+    <NavigationProperty Name="Librarys" Relationship="Self.FK_Library_File" FromRole="Files" ToRole="Librarys" />
+    <NavigationProperty Name="СardofMaterials" Relationship="Self.FK_СardofMaterial_File" FromRole="Files" ToRole="СardofMaterials" />
+  </EntityType>
+  <EntityType Name="Librarys">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdFile" Type="Int32" Nullable="false" />
+    <Property Name="IdSection" Type="Int32" />
+    <NavigationProperty Name="Files" Relationship="Self.FK_Library_File" FromRole="Librarys" ToRole="Files" />
+    <NavigationProperty Name="Sections" Relationship="Self.FK_Library_Section" FromRole="Librarys" ToRole="Sections" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Autor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_Role" FromRole="Roles" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Sections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Librarys" Relationship="Self.FK_Library_Section" FromRole="Sections" ToRole="Librarys" />
+  </EntityType>
+  <EntityType Name="StatusEvents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Events" Relationship="Self.FK_Event_Status_Event" FromRole="StatusEvents" ToRole="Events" />
+  </EntityType>
+  <EntityType Name="StatusFiles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Files" Relationship="Self.FK_File_Status_File" FromRole="StatusFiles" ToRole="Files" />
+  </EntityType>
+  <EntityType Name="StatusMaterials">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="СardofMaterials" Relationship="Self.FK_Сard_of_Material_Status_Material" FromRole="StatusMaterials" ToRole="СardofMaterials" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Territorys">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameTerritory" Type="String" MaxLength="225" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NameBranch" Type="String" MaxLength="225" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NameDivision" Type="String" MaxLength="225" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_Territory" FromRole="Territorys" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="TypeEvents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Events" Relationship="Self.FK_Event_Type_Event" FromRole="TypeEvents" ToRole="Events" />
+  </EntityType>
+  <EntityType Name="TypeMaterials">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="СardofMaterials" Relationship="Self.FK_Сard_of_Material_Type_Material" FromRole="TypeMaterials" ToRole="СardofMaterials" />
+  </EntityType>
+  <EntityType Name="Сalendars">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Strart_Day" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="End_Day" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Id_Employee" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Сalendar_Employee" FromRole="Сalendars" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="СardofMaterials">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateAssent" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdate" Type="DateTime" Precision="3" />
+    <Property Name="IdStatus" Type="Int32" />
+    <Property Name="IdType" Type="Int32" />
+    <Property Name="Area" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IdEmloyee" Type="Int32" Nullable="false" />
+    <Property Name="IdFile" Type="Int32" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Сard_of_Material_Employee" FromRole="СardofMaterials" ToRole="Employees" />
+    <NavigationProperty Name="Files" Relationship="Self.FK_СardofMaterial_File" FromRole="СardofMaterials" ToRole="Files" />
+    <NavigationProperty Name="StatusMaterials" Relationship="Self.FK_Сard_of_Material_Status_Material" FromRole="СardofMaterials" ToRole="StatusMaterials" />
+    <NavigationProperty Name="TypeMaterials" Relationship="Self.FK_Сard_of_Material_Type_Material" FromRole="СardofMaterials" ToRole="TypeMaterials" />
+  </EntityType>
+  <Association Name="FK_File_Category_File">
+    <End Role="CategoryFiles" Type="Self.CategoryFiles" Multiplicity="0..1" />
+    <End Role="Files" Type="Self.Files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryFiles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Files">
+        <PropertyRef Name="IdCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Role">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="IdRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Territory">
+    <End Role="Territorys" Type="Self.Territorys" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Territorys">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="IdTerritory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Event_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="Events" Type="Self.Events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Events">
+        <PropertyRef Name="IdEmployee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Сalendar_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="Сalendars" Type="Self.Сalendars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Сalendars">
+        <PropertyRef Name="Id_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Сard_of_Material_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="СardofMaterials" Type="Self.СardofMaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="СardofMaterials">
+        <PropertyRef Name="IdEmloyee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Event_Status_Event">
+    <End Role="StatusEvents" Type="Self.StatusEvents" Multiplicity="0..1" />
+    <End Role="Events" Type="Self.Events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusEvents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Events">
+        <PropertyRef Name="IdStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Event_Type_Event">
+    <End Role="TypeEvents" Type="Self.TypeEvents" Multiplicity="0..1" />
+    <End Role="Events" Type="Self.Events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeEvents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Events">
+        <PropertyRef Name="IdType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_File_Status_File">
+    <End Role="StatusFiles" Type="Self.StatusFiles" Multiplicity="0..1" />
+    <End Role="Files" Type="Self.Files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusFiles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Files">
+        <PropertyRef Name="IdSatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Library_File">
+    <End Role="Files" Type="Self.Files" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Librarys" Type="Self.Librarys" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Files">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Librarys">
+        <PropertyRef Name="IdFile" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_СardofMaterial_File">
+    <End Role="Files" Type="Self.Files" Multiplicity="0..1" />
+    <End Role="СardofMaterials" Type="Self.СardofMaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Files">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="СardofMaterials">
+        <PropertyRef Name="IdFile" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Library_Section">
+    <End Role="Sections" Type="Self.Sections" Multiplicity="0..1" />
+    <End Role="Librarys" Type="Self.Librarys" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sections">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Librarys">
+        <PropertyRef Name="IdSection" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Сard_of_Material_Status_Material">
+    <End Role="StatusMaterials" Type="Self.StatusMaterials" Multiplicity="0..1" />
+    <End Role="СardofMaterials" Type="Self.СardofMaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusMaterials">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="СardofMaterials">
+        <PropertyRef Name="IdStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Сard_of_Material_Type_Material">
+    <End Role="TypeMaterials" Type="Self.TypeMaterials" Multiplicity="0..1" />
+    <End Role="СardofMaterials" Type="Self.СardofMaterials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeMaterials">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="СardofMaterials">
+        <PropertyRef Name="IdType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RoadsOfRussiaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CategoryFiles" EntityType="Self.CategoryFiles" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" />
+    <EntitySet Name="Events" EntityType="Self.Events" />
+    <EntitySet Name="Files" EntityType="Self.Files" />
+    <EntitySet Name="Librarys" EntityType="Self.Librarys" />
+    <EntitySet Name="News" EntityType="Self.News" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="Sections" EntityType="Self.Sections" />
+    <EntitySet Name="StatusEvents" EntityType="Self.StatusEvents" />
+    <EntitySet Name="StatusFiles" EntityType="Self.StatusFiles" />
+    <EntitySet Name="StatusMaterials" EntityType="Self.StatusMaterials" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Territorys" EntityType="Self.Territorys" />
+    <EntitySet Name="TypeEvents" EntityType="Self.TypeEvents" />
+    <EntitySet Name="TypeMaterials" EntityType="Self.TypeMaterials" />
+    <EntitySet Name="Сalendars" EntityType="Self.Сalendars" />
+    <EntitySet Name="СardofMaterials" EntityType="Self.СardofMaterials" />
+    <AssociationSet Name="FK_File_Category_File" Association="Self.FK_File_Category_File">
+      <End Role="CategoryFiles" EntitySet="CategoryFiles" />
+      <End Role="Files" EntitySet="Files" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Role" Association="Self.FK_Employee_Role">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Territory" Association="Self.FK_Employee_Territory">
+      <End Role="Territorys" EntitySet="Territorys" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Event_Employee" Association="Self.FK_Event_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Events" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Сalendar_Employee" Association="Self.FK_Сalendar_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Сalendars" EntitySet="Сalendars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Сard_of_Material_Employee" Association="Self.FK_Сard_of_Material_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="СardofMaterials" EntitySet="СardofMaterials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Event_Status_Event" Association="Self.FK_Event_Status_Event">
+      <End Role="StatusEvents" EntitySet="StatusEvents" />
+      <End Role="Events" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Event_Type_Event" Association="Self.FK_Event_Type_Event">
+      <End Role="TypeEvents" EntitySet="TypeEvents" />
+      <End Role="Events" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_File_Status_File" Association="Self.FK_File_Status_File">
+      <End Role="StatusFiles" EntitySet="StatusFiles" />
+      <End Role="Files" EntitySet="Files" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Library_File" Association="Self.FK_Library_File">
+      <End Role="Files" EntitySet="Files" />
+      <End Role="Librarys" EntitySet="Librarys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_СardofMaterial_File" Association="Self.FK_СardofMaterial_File">
+      <End Role="Files" EntitySet="Files" />
+      <End Role="СardofMaterials" EntitySet="СardofMaterials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Library_Section" Association="Self.FK_Library_Section">
+      <End Role="Sections" EntitySet="Sections" />
+      <End Role="Librarys" EntitySet="Librarys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Сard_of_Material_Status_Material" Association="Self.FK_Сard_of_Material_Status_Material">
+      <End Role="StatusMaterials" EntitySet="StatusMaterials" />
+      <End Role="СardofMaterials" EntitySet="СardofMaterials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Сard_of_Material_Type_Material" Association="Self.FK_Сard_of_Material_Type_Material">
+      <End Role="TypeMaterials" EntitySet="TypeMaterials" />
+      <End Role="СardofMaterials" EntitySet="СardofMaterials" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
