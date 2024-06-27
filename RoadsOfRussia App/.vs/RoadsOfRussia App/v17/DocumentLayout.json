@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|c:\\users\\\u043D\u0430\u0442\u0430\u043B\u044C\u044F\\desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u043F\u043C02\\roadsofrussia app\\roadsofrussia app\\allwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|solutionrelative:roadsofrussia app\\allwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\roadsofrussia app\\allwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|solutionrelative:roadsofrussia app\\allwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\roadsofrussia app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|solutionrelative:roadsofrussia app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|c:\\users\\\u043D\u0430\u0442\u0430\u043B\u044C\u044F\\desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u043F\u043C02\\roadsofrussia app\\roadsofrussia app\\employeeswindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|solutionrelative:roadsofrussia app\\employeeswindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\roadsofrussia app\\employeeswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|solutionrelative:roadsofrussia app\\employeeswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\roadsofrussia app\\allwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|solutionrelative:roadsofrussia app\\allwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\roadsofrussia app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|solutionrelative:roadsofrussia app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\roadsofrussia app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BF8FF537-4236-41BD-B411-51CC1D67EE83}|RoadsOfRussia App\\RoadsOfRussia App.csproj|solutionrelative:roadsofrussia app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,18 +43,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "EmployeesWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\EmployeesWindow.xaml.cs",
+              "RelativeDocumentMoniker": "RoadsOfRussia App\\EmployeesWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\EmployeesWindow.xaml.cs",
+              "RelativeToolTip": "RoadsOfRussia App\\EmployeesWindow.xaml.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAAEMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T14:37:30.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeesWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\EmployeesWindow.xaml",
+              "RelativeDocumentMoniker": "RoadsOfRussia App\\EmployeesWindow.xaml",
+              "ToolTip": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\EmployeesWindow.xaml",
+              "RelativeToolTip": "RoadsOfRussia App\\EmployeesWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-27T14:34:57.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AllWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\AllWindow.xaml.cs",
               "RelativeDocumentMoniker": "RoadsOfRussia App\\AllWindow.xaml.cs",
               "ToolTip": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\AllWindow.xaml.cs",
               "RelativeToolTip": "RoadsOfRussia App\\AllWindow.xaml.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAwwHkAAAAEAAAA",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAIEAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T10:50:07.196Z"
+              "WhenOpened": "2024-06-03T10:50:07.196Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AllWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\AllWindow.xaml",
               "RelativeDocumentMoniker": "RoadsOfRussia App\\AllWindow.xaml",
@@ -58,26 +92,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\MainWindow.xaml",
               "RelativeDocumentMoniker": "RoadsOfRussia App\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\MainWindow.xaml",
               "RelativeToolTip": "RoadsOfRussia App\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-03T08:08:22.252Z"
+              "WhenOpened": "2024-06-03T08:08:22.252Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "RoadsOfRussia App\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\\u041D\u0430\u0442\u0430\u043B\u044C\u044F\\Desktop\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u041F\u041C02\\RoadsOfRussia App\\RoadsOfRussia App\\MainWindow.xaml.cs",
               "RelativeToolTip": "RoadsOfRussia App\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAwCoAAAAIAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAwCIAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T08:08:20.604Z"
+              "WhenOpened": "2024-06-03T08:08:20.604Z",
+              "EditorCaption": ""
             }
           ]
         },

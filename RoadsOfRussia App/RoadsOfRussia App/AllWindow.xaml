@@ -32,36 +32,36 @@
             </Label.RenderTransform>
         </Label>
         <TextBox x:Name="tbPoisk" Grid.Row="2" TextChanged="tbPoisk_TextChanged" Grid.Column="1" Margin="391,10,67,0" Height="22" VerticalAlignment="Top" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
-        <TreeView Grid.Row="2" x:Name="tv" Margin="52,44,247,5" Grid.ColumnSpan="2" >
+        <TreeView Grid.Row="2" x:Name="tvTerr" Margin="52,44,247,5" Grid.ColumnSpan="2" >
             <Button x:Name="btAllEmployees" Content="Все сотрудники" Click="btAllEmployees_Click" Background="#FF84DA00"/>
-            <TreeViewItem x:Name="tviLevel0" Header="Кировская область" Selected="tviLevel0_Selected">
-                <TreeViewItem x:Name="tviLevel1" Header="Кировский филиал №1" Selected="tviLevel1_Selected">
-                    <TreeViewItem x:Name="tviLevel2" Header="Администрация" Selected="tviLevel2_Selected"/>
+            <TreeViewItem x:Name="tviTerrLevel0" Header="Кировская область" Selected="tviTerrLevel0_Selected">
+                <TreeViewItem x:Name="tviTerrLevel1" Header="Кировский филиал №1" Selected="tviTerrLevel1_Selected">
+                    <TreeViewItem x:Name="tviTerrLevel2" Header="Администрация" Selected="tviTerrLevel2_Selected"/>
                 </TreeViewItem>
-                <TreeViewItem Header="Кировский филиал №2" Selected="tviLevel1_Selected">
-                    <TreeViewItem Header="Администрация" Selected="tviLevel2_Selected"/>
-                    <TreeViewItem Header="IT-отдел" Selected="tviLevel2_Selected"/>
+                <TreeViewItem Header="Кировский филиал №2" Selected="tviTerrLevel1_Selected">
+                    <TreeViewItem Header="Администрация" Selected="tviTerrLevel2_Selected"/>
+                    <TreeViewItem Header="IT-отдел" Selected="tviTerrLevel2_Selected"/>
                 </TreeViewItem>
             </TreeViewItem>
-            <TreeViewItem Header="Московская область" Selected="tviLevel0_Selected">
-                <TreeViewItem Header="Московский филиал №1" Selected="tviLevel1_Selected" Height="105" Width="208">
-                    <TreeViewItem Header="Администрация" Selected="tviLevel2_Selected"/>
+            <TreeViewItem Header="Московская область" Selected="tviTerrLevel0_Selected">
+                <TreeViewItem Header="Московский филиал №1" Selected="tviTerrLevel1_Selected" Height="105" Width="208">
+                    <TreeViewItem Header="Администрация" Selected="tviTerrLevel2_Selected"/>
                 </TreeViewItem>
             </TreeViewItem>
         </TreeView>
-        <DataGrid x:Name="dgList" Grid.Row="3" Margin="52,5,67,43" AutoGenerateColumns="False" Grid.ColumnSpan="3">
+        <DataGrid x:Name="dgList" Grid.Row="3" Margin="52,5,67,43" AutoGenerateColumns="False" Grid.ColumnSpan="3" SelectionChanged="dgList_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}"/>
                 <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Отчество" Binding="{Binding Surname}"/>
-                <DataGridTextColumn Header="Отдел" Binding="{Binding NameTerritory}"/>
-                <DataGridTextColumn Header="Отдел" Binding="{Binding NameBranch}"/>
+                <DataGridTextColumn Header="Область" Binding="{Binding NameTerritory}"/>
+                <DataGridTextColumn Header="Филиал" Binding="{Binding NameBranch}"/>
                 <DataGridTextColumn Header="Отдел" Binding="{Binding NameDivision}"/>
                 <DataGridTextColumn Header="Кабиент" Binding="{Binding Office}"/>
                 <DataGridTextColumn Header="Почта" Binding="{Binding EMail}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label Content="Новости" Grid.Column="1" Margin="253,37,26,131" Grid.Row="2"/>
+        <Label Content="Новости" Grid.Column="1" Margin="253,37,26,120" Grid.Row="2"/>
         <ListView x:Name="lvNews" Grid.Column="1" Margin="253,77,67,15" Grid.Row="2" Grid.ColumnSpan="2" />
     </Grid>
 </Window>

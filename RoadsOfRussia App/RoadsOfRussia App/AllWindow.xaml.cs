@@ -29,7 +29,7 @@ namespace RoadsOfRussia_App
 		/// <summary>
 		/// Выбор сотрудников, которые работают на данной территории
 		/// </summary>
-		private void tviLevel0_Selected(object sender, RoutedEventArgs e)
+		private void tviTerrLevel0_Selected(object sender, RoutedEventArgs e)
 		{
 			e.Handled = true;
 			var sel = e.Source as TreeViewItem;
@@ -57,7 +57,7 @@ namespace RoadsOfRussia_App
 				}
 			}
 		}
-		private void tviLevel1_Selected(object sender, RoutedEventArgs e)
+		private void tviTerrLevel1_Selected(object sender, RoutedEventArgs e)
 		{
 			e.Handled = true;
 			var sel = e.Source as TreeViewItem;
@@ -85,7 +85,7 @@ namespace RoadsOfRussia_App
 				}
 			}
 		}
-		private void tviLevel2_Selected(object sender, RoutedEventArgs e)
+		private void tviTerrLevel2_Selected(object sender, RoutedEventArgs e)
 		{
 			e.Handled = true;
 			var sel = e.Source as TreeViewItem;
@@ -116,11 +116,15 @@ namespace RoadsOfRussia_App
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 			AllEmp();
-			using (var db = new RoadsOfRussiaEntities())
+			try
 			{
-				var newsNames = db.News.Select(n => n.Name).ToList();
-				lvNews.ItemsSource = newsNames;
+				using (var db = new RoadsOfRussiaEntities())
+				{
+					var newsNames = db.News.Select(n => n.Name).ToList();
+					lvNews.ItemsSource = newsNames;
+				}
 			}
+			catch (Exception ex) { MessageBox.Show("Ошибка"+ex.ToString()); }
 		}
 		public void AllEmp()
 		{
@@ -174,6 +178,20 @@ namespace RoadsOfRussia_App
 							};
 				dgList.ItemsSource = users.ToList();
 			}
+		}
+		/// <summary>
+		/// Выбор сотрудника для отображения дополнительной информации о нем
+		/// </summary>
+		private void dgList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if (dgList.SelectedItem != null)
+			{
+				int selectedEmployee = dgList.SelectedIndex+1;
+
+				EmployeesWindow emplWindow = new EmployeesWindow(selectedEmployee);
+				emplWindow.ShowDialog();
+			}
+			else MessageBox.Show("Выберите сотрудника");
 		}
 	}
 }

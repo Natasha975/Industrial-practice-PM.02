@@ -61,3 +61,11 @@ C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsO
 C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\obj\Debug\RoadsOfR.7A1E18F9.Up2Date
 C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\obj\Debug\RoadsOfRussia App.exe
 C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\obj\Debug\RoadsOfRussia App.pdb
+C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\obj\Debug\EmployeesWindow.g.cs
+C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\obj\Debug\EmployeesWindow.baml
+C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\bin\Debug\itextsharp.dll
+C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Наталья\Desktop\Практика ПМ02\RoadsOfRussia App\RoadsOfRussia App\bin\Debug\itextsharp.xml
